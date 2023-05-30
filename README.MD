@@ -11,9 +11,7 @@ Projeto Previsão do Tempo onde o objetivo principal foi desenvolver uma aplica�
 
 3. **Erro ao não achar a cidade:** Caso a cidade solicitada pelo usuario não esteja ou não seja encontrada no banco de dados, ira retornar uma mensagem de erro
 
-4. **Personalização e Autenticação:** A aplicação permitirá que os usuários criem uma conta e façam login para personalizar sua experiência. Os usuários autenticados poderão salvar suas cidades favoritas e receber atualizações automáticas da previsão do tempo para essas cidades.
-
-5. **Integração com API de Mapas:** Para melhorar a experiência do usuário, a aplicação poderá ser integrada com uma API de mapas, permitindo que os usuários visualizem a localização da cidade em um mapa interativo.
+4. **Responsividade** : O projeto conta com responsividade para desktop e para alguns dispositivos moveis.
 
 ## Tecnologias Utilizadas
 - Django: Framework web em Python que facilita o desenvolvimento rápido e eficiente de aplicativos web.
@@ -28,3 +26,15 @@ Projeto Previsão do Tempo onde o objetivo principal foi desenvolver uma aplica�
 - Adquirir conhecimentos sobre o desenvolvimento de aplicativos voltados para dados em tempo real, como a previsão do tempo.
 
 Esse projeto proporcionará uma oportunidade de aplicar e aprofundar os conhecimentos em Django e na biblioteca Requests do Python, além de fornecer uma base sólida para o desenvolvimento de aplicativos web com foco em dados em tempo real.
+
+## O Futuro do Projeto
+
+4. **Sistema de Login e Autenticação:** Adicionar um sistema de login para o usuario, onde  aplicação permitirá que os usuários criem uma conta e façam login para personalizar sua experiência. Os usuários autenticados poderão salvar suas cidades favoritas e receber atualizações automáticas da previsão do tempo para essas cidades.
+
+5. **Integração com API de Mapas:** Para melhorar a experiência do usuário, a aplicação poderá ser integrada com uma API de mapas, permitindo que os usuários visualizem a localização da cidade em um mapa interativo.
+
+## Ilustrações
+Segue algumas imagens de como o projeto pronto ficou!!!
+![clearsky](../previsao_tempo/imagens/clearsky.png)
+![Recife](../previsao_tempo/imagens/recife.png)
+![error](../previsao_tempo/imagens/error.png)
