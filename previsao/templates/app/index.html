@@ -1,0 +1,99 @@
+<!-- Arquivo: index.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{% static 'style.css' %}">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+   
+   <title>Previsão do tempo</title>
+</head>
+<body>
+   <div class="container">
+      <form  method='POST' action="{%url 'index'%}"  class="search-box">
+        {% csrf_token %}
+          <i class="fa-solid fa-location-dot"></i>
+          <input class='valor' type="text" 
+          name='cidade'
+          placeholder="Digite sua cidade"
+          required>
+          <button type="submit" class="fa-solid fa-magnifying-glass"></button>
+      </form >
+    {%if dados%}
+    <div class="main-card">
+        <div></div>
+        {%if dados.descricao == 'Clear Sky'%}
+            <img class='imagem' src="{% static 'imagens/clear.png'%}" alt="Minha Imagem">
+        {%elif 'Clouds' in dados.descricao%}  
+            <img class='imagem' src="{% static 'imagens/cloud.png'%}" alt="Minha Imagem">
+
+        {% comment %} {% elif dados.descricao == 'overcast clouds' or dados.descricao == 'few clouds' %}
+             <img class='imagem' src="{% static 'imagens/cloud.png'%}" alt="Minha Imagem"> {% endcomment %}
+
+        {% elif 'Rain' in dados.descricao  or dados.descricao == 'Drizzle'%}
+            <img class='imagem' src="{% static 'imagens/rain.png'%}" alt="Minha Imagem">
+
+        {% elif dados.descricao == 'Shower Rain' or dados.descricao == 'Thunderstorm'%}
+             <img class='imagem' src="{% static 'imagens/snow.png'%}" alt="Minha Imagem">
+        {%else%}
+            <img class='imagem' src="{% static 'imagens/mist.png'%}" alt="Minha Imagem">
+        {%endif%}
+
+        <div class='information'>
+            <p>{{dados.descricao}}</p>
+            <p>{{dados.temperatura}}ºC</p>  
+        </div>
+               
+     </div>
+      {% comment %} <div class="not-found">
+         <img class='imagem' src="{% static 'imagens/naoencontrado.png' %}" alt="Minha Imagem">
+          <p>Ops!Localização invalida</p>          
+      </div> {% endcomment %}
+
+      <div class="weather-box">
+        <span>
+          <p class="temperature">{{dados.humidity}}%</p>
+        </span>
+        <span>
+          <p class="description">{{dados.ventos}}km/h</p>
+        </span>
+      </div>
+
+      <div class="weather-details">
+          <div class="humidity">
+              <i class="fa-solid fa-water"></i>
+              <div class="text">
+                  <span></span>
+                  <p>Humidity</p>
+              </div>
+
+          </div>
+          <div class="wind">
+            <i class="fa-solid fa-wind"></i>
+            <div class="text">
+                <span></span>
+                <p>Wind Speed</p>
+            </div>
+      </div>
+      
+      {% else %}
+       <div class="not-found">
+         <img class='imagem' src="{% static 'imagens/naoencontrado.png' %}" alt="Minha Imagem">
+          <p>Ops!Localização invalida</p>          
+      </div> 
+      
+    {%endif%}
+  </div>
+
+
+  <script src="https://kit.fontawesome.com/7c8801c017.js"></script>
+  
+
+</body>
+</html>
