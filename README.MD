@@ -35,6 +35,10 @@ Esse projeto proporcionará uma oportunidade de aplicar e aprofundar os conhecim
 
 ## Ilustrações
 Segue algumas imagens de como o projeto pronto ficou!!!
-![clearsky](../previsao_tempo/imagens/clearsky.png)
-![Recife](../previsao_tempo/imagens/recife.png)
-![error](../previsao_tempo/imagens/error.png)
+![clearsky](./imagens/clearsky.png)
+
+![Recife](./imagens/recife.png)
+
+
+![error](./imagens/error.png)
+
