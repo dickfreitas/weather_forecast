@@ -1,7 +1,7 @@
 # Projeto de Previsão do Tempo utilizando Django e a biblioteca Requests do Python
 
 ## Descrição do Projeto
-Projeto Previsão do Tempo onde o objetivo principal foi desenvolver uma aplicação web usando o framework Djanfo e a biblioteca Requests do Python, a aplicação permitira que os usuarios visualizem a previsão do tempo atual. 
+Projeto Previsão do Tempo onde o objetivo principal foi desenvolver uma aplicação web usando o framework Django e a biblioteca Requests do Python, a aplicação permitira que os usuarios visualizem a previsão do tempo atual. 
 
 
 ## Funcionalidades Principais
